@@ -1,0 +1,20 @@
+body                        {
+    width:                  100vw;
+    height:                 100vh;
+    display:                flex;
+    flex-direction:         column;
+    justify-content:        center;
+    align-items:            center;
+    box-sizing:             sizing-box;
+    margin:                 0;
+    font-family:            sans-serif;
+    font-size:              1rem;
+    color:                #01021E;
+    overflow-x:             hidden;
+    background-color:     #DFFAFF;
+}
+
+a {
+    color:                #01021E;
+    text-decoration:        none;
+}

@@ -1,0 +1,256 @@
+body                        {
+    width:                  100vw;
+    display:                flex;
+    flex-direction:         column;
+    justify-content:        center;
+    align-items:            center;
+    box-sizing:             sizing-box;
+    margin:                 0;
+    padding:                0;
+    font-family:            sans-serif;
+    font-size:              1rem;
+    color:                  #01021E;
+    overflow-x:             hidden;
+}
+
+.container                  {
+    width:                  80vw;
+    display:                grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-gap: 0 ;
+    grid-template-areas:    "aside main main main";
+    background-color:     #DFFAFF;
+}
+
+h1                          {
+    color:                #012055;
+    margin:                 3vw 0 2vw 1vw; 
+}
+
+h2, h3, h4                        {
+    color:                #012055;
+    margin:                 1vw 0 0 1vw; 
+} 
+
+aside                       {
+    width:                  20vw;
+    display:                flex;
+    flex-direction:         row;
+    justify-content:        space-around;
+    align-items:            stretch;
+    grid-area:              aside;
+}
+
+main                        {
+    width:                  60vw;
+    display:                flex;
+    flex-direction:         column;
+    justify-content:        flex-start;
+    align-items:            flex-start;
+    background-color:     #DFFAFF;
+    margin:                 0 0 0 0.5vw;
+    grid-area:              main;
+}
+
+/* ---_SECCION aside--- */
+aside .color                 {
+    width:                  2vw;
+    background-color:     #1F91F6;
+    border-right:           solid 2px #01021E ;
+    padding:                0;
+    margin:                 0;
+}
+
+aside .profile              {
+    width:                  16vw;
+    height:                 19vw;
+    border-radius:          50%;
+    margin:                 2vw 0 1vw 1vw;
+    padding: 0;
+}
+
+.datos .icon {
+    width: 24px;
+    height: 24px;
+    margin: 1vw 1vw 0 0;
+    color: #01021E;
+}
+
+aside .datpersonal          {
+    width:                  18vw;
+    background-color:     #c2dee5;
+    margin:                 0;
+    padding:                0;
+}
+
+.imgtex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.datos, .habilidades, .idiomas{
+    margin: 0 0 0 1vw;
+}
+
+aside h3 {
+    margin-top: 2vw;
+}
+
+aside p {
+    margin-top: 1vw;
+    margin-bottom: 0;
+
+}
+
+/* ---_SECCION HEADER--- */
+header                      {
+    width:                  55vw;
+    margin-bottom:          3vw;
+}
+
+.perfil                     {
+    border-top:             solid 1px #012055;
+}
+
+.perfil p                   {
+    text-align:             justify;
+    padding:                0.5vw;
+    margin:                 0;
+}
+
+/* _SECCION formacion */
+.formacion                  {
+    width:                  55vw;
+    border-top:             solid 1px #012055;
+    margin-bottom:          3vw;
+}
+
+.formacion p                {
+    text-align:             justify;
+    padding:                1vw 2vw 2vw 2vw;
+    margin:                 0;
+}
+
+/* _SECCION experiencia */
+.experiencia                  {
+    width:                  55vw;
+    border-top:             solid 1px #012055;
+    margin-bottom:          3vw;
+}
+
+.experiencia p                {
+    text-align:             justify;
+    padding:                1vw 2vw 2vw 2vw;
+    margin:                 0 0 2vw 0;
+}
+
+/* _SECCION cursos */
+.cursos                 {
+    width:                  55vw;
+    border-top:             solid 1px #012055;
+    margin-bottom:          3vw;
+}
+
+.cursos p                {
+    text-align:             justify;
+    padding:                0 2vw 2vw 2vw;
+    margin:                 1vw 0 2vw 0;
+}
+
+/* _SECCION personal */
+.FyA               {
+    width:                  55vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-top:             solid 1px #012055;
+    margin-bottom:          3vw;
+}
+
+.FyA li {
+    text-align:             justify;
+    margin:                 0 0 1vw 0;
+}
+
+.FyA h2 {
+    margin:                 2vw 0 0 2vw;
+}
+
+.fortalezas, .mejorar{
+    width:  25vw;
+}
+
+/* _SECCION formulario */
+.beforeform {
+    width:                  52vw;
+    text-align:             justify;
+    padding:                1vw;
+    margin:                 0;
+    border-top:             solid 1px #012055;
+}
+
+form {
+    width:                  55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2vw 2vw;
+}
+
+form input {
+    width: 20vw;
+    margin: 0.2vw 0;
+    justify-self: center;
+}
+
+form #mensaje {
+    width: 40vw;
+    height: 10vw;
+    display: inline-block;
+    text-align: start;
+    font-family: sans-serif;
+    margin: 0.2vw 0;
+}
+
+button {
+    width:              8vw;
+    height:             2vw;
+    background-color: #012055;
+    border-radius:      50px;
+    font-style:         normal;
+    font-weight:        1500;
+    color:            #DFFAFF;
+    order:              1;
+    box-shadow:         0px 4px 7px rgba(0, 0, 0, 1);
+    border:             none;
+    margin:             1vw 0;
+    transition:
+        background-color    150ms,
+        color               150ms;
+}
+
+button:hover {
+    color:              #012055;
+    background-color:   #DFFAFF;
+}
+
+/* _SECCION footer */
+footer {
+    width: 55vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top:             solid 1px #012055;
+}
+
+footer img {
+    width: 3vw;
+    height: 3vw;
+    margin: 2vw 3vw;
+    color: #01021E;
+}

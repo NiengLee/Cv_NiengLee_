@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nieng Lee | Curriculum</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'style_index.css' %}">
+</head>
+<body>
+    <div class="container">
+        <aside class="izq">
+            <div class="color">
+            </div>
+            <div class="datpersonal">
+                <img class="profile" src="{% static 'img/foto nieng lee hoy.jpg' %}" alt="Foto perfil">
+                <h3>Datos personales</h3>
+                    <div class="datos"> 
+                        <div class="imgtex"><img class="icon" src="{% static 'img/home.svg' %}" alt="home"><p>Medellín,Colombia</p></div>
+                        <div class="imgtex"><img class="icon" src="{% static 'img/phone.svg' %}" alt="phone"><p>319 527 5802</p></div>
+                        <div class="imgtex"><img class="icon" src="{% static 'img/mail.svg' %}" alt="mail"><p>ncyl91@gmail.com</p></div>
+                    </div>
+                <h3>Habilidades</h3>
+                    <div class="habilidades">
+                        <p>Python</p><progress id="file" max="5" value="4"></progress>
+                        <p>HTML/CSS</p><progress id="file" max="5" value="4.5"></progress>
+                        <p>Microsoft office</P><progress id="file" max="5" value="4"></progress>
+                        <p>KNIME</P><progress id="file" max="5" value="2.5"></progress>
+                        <p>PowerBI</p><progress id="file" max="5" value="4"></progress>
+                        <p>PostgreSQL</p><progress id="file" max="5" value="3"></progress>
+                        <p>Git/Github</p><progress id="file" max="5" value="4"></progress>
+                        <p>Bash</p><progress id="file" max="5" value="4"></progress>
+                    </div>
+                <h3>Idiomas</h3>
+                    <div class="idiomas">
+                        <p>Ingles | TOEFL-IBT</p><progress id="file" max="120" value="70"></progress>
+                    </div>
+                <h3>Hobbies e Intereses</h3>
+                    <ul>
+                        <li>Bartender</li>
+                        <li>Saxofón</li>
+                        <li>Química e Ingeniería</li>
+                        <li>Deportes</li>
+                    </ul>
+            </div>
+        </aside>
+        <main>
+            <header>
+                <h1>Nieng Yordan Lee Gaitan</h1>
+                <h4 class="subtitle">Ingeniero / ciencia de datos y desarrollo web</h4>
+                <h2>Perfil</h2>
+                <article class="perfil">
+                    <p>Proactivo y atento a los cambios rapidos y constantes en el mundo actual, para adaptarme a lo que la sociedad necesita continuamente;
+                    <p>actualmente cursando "Certified Web Development" con Digital House donde adquiero conocimiento en el uso herramientas de diseño web en el frontend, backend, y habilidades blandas correspondientes a le metodologías ágiles de trabajo como SCRUM y KANBAN.</p>
+                    <p>Habilidades de comunicación y trabajo en equipo con un constante enfoque en el logro de objetivos.</p>
+                    <p>Apasionado por la investigación para estar actualizado de las tendencias en la tecnología, la informática y la ingeniería.</p>
+                </article>
+            </header>
+            <h2>Formación</h2>
+            <section class="formacion">
+                <h3>Ingeniero Químico; 2009/02 - 2014/09 </h3>
+                <p>Universidad Nacional de Colombia - Sede Medellín</p>
+            </section>
+            <h2>Experiencia</h2>
+            <section class="experiencia">
+                <h3>PROCOLMAT; 2020/09 - 2021/02</h3>
+                <p>Analista de calidad / investigación y desarrollo | Analizar la calidad del producto final, y aplicación de machine learning y ciencia de datos para predecir la calidad del producto final a partir de el análisis técnico de la materia prima</p>
+                <h3>Inversiones G9; 2020/7 - 2020/10</h3>
+                <p>Analista de datos | Analizar las ventas realizadas de tiendas virtuales, estimación de ventas y proyecciones, determinación de categorías mas vendidas por departamento en Colombia, y detección de perdidas de capital por costos en campañas de publicidad, devolucion de pedidos, y pagos por transportadoras</p>
+            </section>
+            <h2>Cursos</h2>
+            <section class="cursos">
+                <h3>Certified web development; 2022</h3>
+                <p>Curso actualmente en curso en Digital House</p>
+                <h3>Data science-Machine/Deep Learning; 2020</h3>
+                <p>Curso realizado en Data Camp</p>
+            </section>
+            <section class="personal">
+                <h2>Personalidad</h2>
+                <div class="FyA">
+                    <div class="fortalezas">
+                        <h2>Fortalezas</h2>
+                        <ul>
+                            <li>Eficiencia para encontrar multiples soluciones a situaciones no esperadas</li>
+                            <li>Soporte y apoyo al equipo de trabajo </li>
+                            <li>Manejo adecuado del tiempo para el alcance de metas y solución a percances no esperados</li>
+                        </ul>
+                    </div>
+                    <div class="mejorar">
+                        <h2>Aspectos a mejorar</h2>
+                        <ul>
+                            <li>Aceptar rapidamente los cambios impuestos justo antes de alcanzar una meta</li>
+                            <li>Comprender la situación de algún miembro del equipo cuando no se le posibilita cumplir con algún compromiso</li>
+                            <li>Enfoque en reuniones de extensas duraciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <h2>Contáctame</h2>
+            <p class="beforeform">Si te interesa mi perfil, puedes escribirme y tan pronto como sea posible te contactaré</p>
+            <form method="POST">
+                {% csrf_token %}
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+                <input id="email" type="email" name="email" placeholder="E-mail" required>
+                <input id="asunto" type="text" name="asunto" placeholder="Asunto" required>
+                <textarea id="mensaje" type="text" name="mensaje" placeholder="Escribe aquí tu mensaje" required></textarea>
+                <button id="enviar" type="submit" name="enviar"><strong>Enviar</strong></button>
+
+            </form>
+            <h2>Mi perfil en redes sociales</h2>
+            <footer>
+                <a href="https://www.linkedin.com/in/ncyl91/" target="blank"><img src="{% static 'img/linkedin.svg' %}" alt="linkedin"></a>
+                <a href="https://github.com/NiengLee" target="blank"><img src="{% static 'img/github.svg' %}" alt="github"></a>
+                <a href="https://www.youtube.com/watch?v=szvkHAWEHi8&t=20s" target="blank"><img src="{% static 'img/youtube.svg' %}" alt="youtube"></a>
+                <a href="https://www.facebook.com/niengyordan.leegaitan" target="blank"><img src="{% static 'img/facebook.svg' %}" alt="facebook"></a>
+                <a href="https://www.instagram.com/nienglee_/" target="blank"><img src="{% static 'img/instagram.svg' %}" alt="instagram"></a>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
